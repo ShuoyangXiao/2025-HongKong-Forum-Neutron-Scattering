@@ -1,0 +1,68 @@
+<style>
+  /* 全局样式：表格宽度统一便于打印；姓名加粗；tobedone 单独一行；餐饮/休息颜色区分 */
+  .program-table { width:800px; margin:0 auto 24px; border-collapse:collapse; table-layout:fixed; }
+  .program-table td, .program-table th { border:1px solid #999; padding:8px 10px; }
+  .speaker { line-height:1.25; }
+  .speaker .name { font-weight:700; }
+  .tobedone { color:#b03; font-style:italic; margin-top:4px; display:block; }
+  .lunch { background:#fff8e6; }
+  .dinner { background:#ffeef0; }
+  .break { background:#e8f6ff; }
+  /* 列宽与排版优化：第一列（时间）固定且居中，第二列可换行且顶对齐 */
+  .program-table th:first-child, .program-table td:first-child { width:170px; white-space:nowrap; text-align:center; }
+  .program-table th:last-child, .program-table td:last-child { width:calc(100% - 170px); text-align:left; vertical-align:top; }
+  .program-table td { vertical-align:top; }
+  /* 标题居中并微调间距，便于打印 */
+  h2 { text-align:center; margin:18px 0 8px; font-weight:600; }
+  @media print {
+    .program-table { width:100%; }
+  }
+</style>
+
+<h2>Day 1 (December 8, 2025 Monday)</h2>
+<table class="program-table" cellspacing="0" cellpadding="6">
+  <tr><th>Time</th><th>Speaker / Affiliation / Title</th></tr>
+  <!-- Day1: 上午 3 场，下午 3 场；把早茶放在第一与第二讲之间（30 分钟），下午也同理 -->
+  <tr><td>09:30–10:15</td><td><div class="speaker"><span class="name">Sung-Min Choi</span>, Korea Advanced Institute of Science and Technology (KAIST), Korea</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>10:15–10:45</td><td class="break">Break</td></tr>
+  <tr><td>10:45–11:30</td><td><div class="speaker"><span class="name">Peter Falus</span>, Institut Laue-Langevin (ILL), France</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>11:30–12:15</td><td><div class="speaker"><span class="name">Frank Gabel</span>, Institut Laue-Langevin (ILL), France</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>12:15–14:00</td><td class="lunch">Lunch</td></tr>
+  <tr><td>14:00–14:45</td><td><div class="speaker"><span class="name">Peixun Li</span>, ISIS Neutron and Muon Source, United Kingdom</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>14:45–15:15</td><td class="break">Break</td></tr>
+  <tr><td>15:15–16:00</td><td><div class="speaker"><span class="name">Jian Ren Lu</span>, University of Manchester, United Kingdom</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>16:00–16:45</td><td><div class="speaker"><span class="name">Mona Sarter</span>, ISIS Neutron and Muon Source, United Kingdom</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>17:00–20:00</td><td class="dinner">Dinner</td></tr>
+</table>
+
+<h2>Day 2 (December 9, 2025 Tuesday)</h2>
+<table class="program-table" cellspacing="0" cellpadding="6">
+  <tr><th>Time</th><th>Speaker / Affiliation / Title</th></tr>
+  <!-- Day2: 上午 3 场，下午 3 场；把早茶放在第一与第二讲之间（30 分钟），下午也同理 -->
+  <tr><td>09:30–10:15</td><td><div class="speaker"><span class="name">Koichi Mayumi</span>, University of Tokyo, Japan</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>10:15–10:45</td><td class="break">Break</td></tr>
+  <tr><td>10:45–11:30</td><td><div class="speaker"><span class="name">Tatsuro Oda</span>, University of Tokyo, Japan</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>11:30–12:15</td><td><div class="speaker"><span class="name">Hideki Seto</span>, Japan Proton Accelerator Research Complex (J-PARC) / CROSS, Japan</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>12:15–14:00</td><td class="lunch">Lunch</td></tr>
+  <tr><td>14:00–14:45</td><td><div class="speaker"><span class="name">Takeshi Yamada</span>, Japan Proton Accelerator Research Complex (J-PARC) / CROSS, Japan</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>14:45–15:15</td><td class="break">Break</td></tr>
+  <tr><td>15:15–16:00</td><td><div class="speaker"><span class="name">He Cheng</span>, China Spallation Neutron Source (CSNS), China</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>16:00–16:45</td><td><div class="speaker"><span class="name">Hongyu Guo</span>, China Spallation Neutron Source (CSNS), China</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>17:00–20:00</td><td class="dinner">Dinner</td></tr>
+</table>
+
+<h2>Day 3 (December 10, 2025 Wednesday)</h2>
+<table class="program-table" cellspacing="0" cellpadding="6">
+  <tr><th>Time</th><th>Speaker / Affiliation / Title</th></tr>
+  <!-- Day3: 上午 3 场，下午 3 场；把早茶放在第一与第二讲之间（30 分钟），下午也同理 -->
+  <tr><td>09:30–10:15</td><td><div class="speaker"><span class="name">Yubin Ke</span>, China Spallation Neutron Source (CSNS), China</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>10:15–10:45</td><td class="break">Break</td></tr>
+  <tr><td>10:45–11:30</td><td><div class="speaker"><span class="name">Limei Xu</span>, Peking University, China</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>11:30–12:15</td><td><div class="speaker"><span class="name">Xiangqiang Chu</span>, City University of Hong Kong, Hong Kong</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>12:15–14:00</td><td class="lunch">Lunch</td></tr>
+  <tr><td>14:00–14:45</td><td><div class="speaker"><span class="name">Jun Fan</span>, City University of Hong Kong, Hong Kong</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>14:45–15:15</td><td class="break">Break</td></tr>
+  <tr><td>15:15–16:00</td><td><div class="speaker"><span class="name">TBA</span>, To be confirmed</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>16:00–16:45</td><td><div class="speaker"><span class="name">TBA</span>, To be confirmed</div><div class="tobedone">Title：to be done</div></td></tr>
+  <tr><td>17:00–20:00</td><td class="dinner">Dinner</td></tr>
+</table>

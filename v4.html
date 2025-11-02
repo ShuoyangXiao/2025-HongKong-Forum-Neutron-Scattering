@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Hong Kong Forum on Neutron Scattering | City University of Hong Kong</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #D64337 0%, #F47920 100%);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-image {
+            height: 60px; /* 调整Logo高度 */
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .logo p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(214, 67, 55, 0.85), rgba(244, 121, 32, 0.9)), url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero .btn {
+            background-color: white;
+            color: #D64337;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .hero .btn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Sponsors Section */
+        .sponsors-section {
+            background: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .sponsors-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .sponsor-logo {
+            height: 60px;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+        
+        .sponsor-logo:hover {
+            filter: grayscale(0%);
+        }
+        
+        /* Main Content Styles */
+        .main-content {
+            padding: 60px 0;
+            background-color: white;
+            margin: 40px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #D64337;
+            font-size: 2.2rem;
+            font-weight: 700;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #D64337, #F47920);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        .about-conference {
+            margin-bottom: 50px;
+            padding: 0 30px;
+        }
+        
+        .about-conference p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .event-details {
+            margin-bottom: 50px;
+            padding: 0 30px;
+        }
+        
+        .event-details h3 {
+            color: #D64337;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .detail-card {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #F47920;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .detail-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, rgba(214, 67, 55, 0.05) 0%, rgba(244, 121, 32, 0.05) 100%);
+            border-radius: 0 0 0 100%;
+        }
+        
+        .detail-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(214, 67, 55, 0.2);
+            border-left-color: #D64337;
+        }
+        
+        .detail-card h4 {
+            color: #D64337;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .detail-card h4:before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #F47920;
+            border-radius: 50%;
+        }
+        
+        .detail-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .detail-card ul li {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .detail-card ul li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #F47920;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .speaker-info h4 {
+            color: #D64337;
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+        
+        .speaker-info p {
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .speaker-affiliation {
+            color: #888;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        
+        /* Registration Form */
+        .registration-section {
+            background: linear-gradient(135deg, rgba(214, 67, 55, 0.05) 0%, rgba(244, 121, 32, 0.05) 100%);
+            padding: 60px 30px;
+            border-radius: 10px;
+            margin: 50px 30px;
+            border: 1px solid rgba(214, 67, 55, 0.1);
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #D64337;
+        }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+        
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #D64337;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(214, 67, 55, 0.2);
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .btn-submit {
+            background: linear-gradient(135deg, #D64337 0%, #F47920 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: block;
+            margin: 30px auto 0;
+            width: 200px;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(214, 67, 55, 0.4);
+        }
+        
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, #2c2c2c 0%, #444 100%);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #F47920;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 12px;
+            display: block;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #F47920;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #555;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Conference Topics */
+        .topics-section {
+            margin: 50px 0;
+            padding: 0 30px;
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .topic-item {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid #F47920;
+            transition: all 0.3s;
+        }
+        
+        .topic-item:hover {
+            background-color: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Important Dates */
+        .dates-section {
+            margin: 50px 0;
+            padding: 0 30px;
+        }
+        
+        .dates-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .dates-timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #D64337, #F47920);
+            transform: translateX(-50%);
+        }
+        
+        .date-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            width: calc(50% - 30px);
+            position: relative;
+        }
+        
+        .date-item:nth-child(odd) {
+            margin-right: auto;
+        }
+        
+        .date-item:nth-child(even) {
+            margin-left: auto;
+        }
+        
+        .date-item:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #D64337;
+        }
+        
+        .date-item:nth-child(odd):before {
+            right: -38px;
+        }
+        
+        .date-item:nth-child(even):before {
+            left: -38px;
+        }
+        
+        .date-item h4 {
+            color: #D64337;
+            margin-bottom: 10px;
+        }
+        
+        /* Program Schedule */
+        .program-section {
+            margin: 50px 0;
+            padding: 0 30px;
+        }
+        
+        .program-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 600px;
+            border-left: 5px solid #D64337;
+            text-align: center;
+        }
+        
+        .program-card h3 {
+            color: #D64337;
+            margin-bottom: 20px;
+        }
+        
+        .program-card ul {
+            display: inline-block;
+            text-align: left;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .dates-timeline:before {
+                left: 20px;
+            }
+            
+            .date-item {
+                width: calc(100% - 50px);
+                margin-left: 50px !important;
+            }
+            
+            .date-item:nth-child(odd):before,
+            .date-item:nth-child(even):before {
+                left: -35px;
+            }
+            
+            .sponsors-logos {
+                flex-direction: column;
+                gap: 20px;
+            }
+			
+			.speakers-grid {
+				grid-template-columns: 1fr;
+			}
+        }
+		
+		.speakers-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 30px;
+			margin-top: 30px;
+		}
+		
+		.speaker-card {
+			/* Card Container */
+			border: 1px solid #ccc;
+			background-color: #FFA07A; /* Orange Background */
+			border-radius: 8px; 
+			padding: 10px; 
+		}
+
+		.speaker-link {
+			/* Flexbox Centering */
+			display: flex; 
+			flex-direction: column;
+			align-items: center; 
+			text-decoration: none;
+			color: #333;
+		}
+
+		.speaker-img {
+			/* Larger Image Size */
+			width: 180px; /* Adjust size as needed */
+			height: auto; 
+			max-width: 100%; 
+			
+			/* Image Styling */
+			/* 📦 Remove the border-radius to get a square/box shape 📦 */
+			border-radius: 0; /* Ensures it's a box (or you can just delete the line) */
+			
+			margin-bottom: 10px; 
+			border: 3px solid #fff; /* White border around the image */
+		}
+
+		.speaker-info {
+			text-align: center;
+		}
+		
+		.croucher-link {
+			text-decoration: none;   /* removes underline */
+			color: #333;           /* sets text color to orange */
+		}
+
+		.croucher-link:hover {
+			text-decoration: underline; /* optional: underline on hover */
+		}
+
+		
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- 替换为香港城市大学物理系官方Logo -->
+                <img src="https://template.cityu.edu.hk/template/logo/phy/phy_logo_eng_cmyk.svg" alt="City University of Hong Kong Department of Physics" class="logo-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#speakers">Speakers</a></li>
+                    <li><a href="#program">Program</a></li>
+                    <li><a href="#registration">Registration</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>2025 Hong Kong Forum on Neutron Scattering</h1>
+            <p>Focus on Soft Matter and Complex Materials</p>
+            <a href="#registration" class="btn">Register Now</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <!-- About Conference -->
+            <section class="about-conference" id="about">
+                <h2 class="section-title">About the Forum</h2>
+                <p>The Hong Kong Forum on Neutron Scattering is a conference series that focuses on specific aspects of neutron scattering science and their applications. The 2025 Forum will feature <strong>soft matter and complex materials</strong>, particularly in relation to scientific research and instrument development.</p>
+                <p>Sponsored by the Croucher Foundation and the Center for Neutron Scattering at City University of Hong Kong (CityUHK), the 2025 Forum will gather leading experts from around the world in the fields of soft matter and biophysics, as well as specialists from major international neutron scattering facilities, to share their latest findings and discuss current issues.</p>
+                <p>Additionally, the forum will provide opportunities for students and early-career scientists in Hong Kong and the surrounding area to learn the fundamentals and applications of neutron scattering.</p>
+            </section>
+
+            <!-- Event Details -->
+            <section class="event-details">
+                <h2 class="section-title">Forum Details</h2>
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <h4>📅 Date & Time</h4>
+                        <ul>
+                            <li>December 7-10, 2025</li>
+                            <li>9:00 AM - 6:00 PM daily</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h4>📍 Venue</h4>
+                        <ul>
+                            <li>Benjamin & Anny Kwok Multi-media Conference Room</li>
+                            <li>City University of Hong Kong</li>
+                            <li>Tat Chee Avenue, Kowloon, Hong Kong</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card">
+                        <h4>🎯 Format</h4>
+                        <ul>
+                            <li>In-person Conference</li>
+                            <li>Language: English</li>
+                            <li>Focus: Soft Matter & Complex Materials</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Program Section -->
+            <section class="program-section" id="program">
+                <h2 class="section-title">Program Overview</h2>
+                <div class="program-card">
+                    <h3>Day 0 (December 7)</h3>
+                    <ul>
+                        <li>Registration</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3>Day 1-3 (December 8-10)</h3>
+                    <ul>
+                        <li>Scientific Talks & Discussions</li>
+                        <li>Welcome Dinner (Day 1)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Speakers -->
+            <section class="speakers-section" id="speakers">
+                <h2 class="section-title">Invited Speakers</h2>
+                <div class="speakers-grid">
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://www.ill.eu/for-ill-users/scientific-groups/biology-deuteration-chemistry-and-soft-matter-support/people/frank-gabel" data-org="https://www.ill.eu" target="_blank" rel="noopener" title="Prof. Frank Gabel (ILL)">
+                            <img class="speaker-img speaker-img--portrait" src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=uc9FdAIAAAAJ&citpid=6" alt="Prof. Frank Gabel">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Frank Gabel</h4>
+                            <p class="speaker-affiliation">Institute Laue-Langevin (ILL), France</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://www.ill.eu/for-ill-users/scientific-groups/spectroscopy/people/peter-falus" data-org="https://www.ill.eu" target="_blank" rel="noopener" title="Dr. Peter Falus (ILL)">
+                            <img class="speaker-img speaker-img--landscape" src="https://www.ill.eu/fileadmin/_processed_/5/7/csm_csm_Falus_05cb9807c7_f3595f58ce.png" alt="Dr. Peter Falus">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Dr. Peter Falus</h4>
+                            <p class="speaker-affiliation">Institute Laue-Langevin (ILL), France</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://www.isis.stfc.ac.uk/Pages/SH25_Mona-Sarter.aspx" data-org="https://www.isis.stfc.ac.uk" target="_blank" rel="noopener" title="Dr. Mona Sarter (ISIS)">
+                            <img class="speaker-img speaker-img--portrait" src="https://www.isis.stfc.ac.uk/Gallery/MONA.jpg?Width=360&Height=222&RenditionID=6" alt="Dr. Mona Sarter">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Dr. Mona Sarter</h4>
+                            <p class="speaker-affiliation">ISIS Neutron and Muon Source, UK</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://pure.kaist.ac.kr/en/persons/sung-min-choi" data-org="https://www.kaist.ac.kr" target="_blank" rel="noopener" title="Prof. Sung-Min Choi (KAIST)">
+                            <img class="speaker-img" src="https://pure.kaist.ac.kr/files-asset/13608019/1178.jpg?w=320&f=webp" alt="Prof. Sung-Min Choi">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Sung-Min Choi</h4>
+                            <p class="speaker-affiliation">Korea Advanced Institute of Science and Technology (KAIST), Korea</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://research.kek.jp/people/seto/profile.html" data-org="https://research.kek.jp" target="_blank" rel="noopener" title="Prof. Hideki Seto (J-PARC/CROSS)">
+                            <img class="speaker-img speaker-img--landscape" src="https://research.kek.jp/people/seto/images/1703shiosaka_sobetsu.jpg" alt="Prof. Hideki Seto">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Hideki Seto</h4>
+                            <p class="speaker-affiliation">J-PARC/CROSS, Japan</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://www.k.u-tokyo.ac.jp/materials/en/mayumi/" data-org="https://www.k.u-tokyo.ac.jp/en/" target="_blank" rel="noopener" title="Prof. Koichi Mayumi (University of Tokyo)">
+                            <img class="speaker-img" src="https://kmayumi.issp.u-tokyo.ac.jp/wp-content/uploads/2022/02/member-img01-2.jpg" alt="Prof. Koichi Mayumi">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Koichi Mayumi</h4>
+                            <p class="speaker-affiliation">University of Tokyo, Japan</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://www.u-tokyo.ac.jp/focus/en/people/k0001_04078.html" data-org="https://www.u-tokyo.ac.jp/en/" target="_blank" rel="noopener" title="Prof. Tatsuro Oda (University of Tokyo)">
+                            <img class="speaker-img" src="https://kmayumi.issp.u-tokyo.ac.jp/wp-content/uploads/2022/02/member-img02-2.jpg" alt="Prof. Tatsuro Oda">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Tatsuro Oda</h4>
+                            <p class="speaker-affiliation">University of Tokyo, Japan</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://www.scl.kyoto-u.ac.jp/~kanaya2/yamada.html" data-org="https://j-parc.jp" target="_blank" rel="noopener" title="Prof. Takeshi Yamada (J-PARC/CROSS)">
+                            <img class="speaker-img speaker-img--portrait" src="https://www.scl.kyoto-u.ac.jp/~kanaya2/2yamada.jpg" alt="Prof. Takeshi Yamada">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Takeshi Yamada</h4>
+                            <p class="speaker-affiliation">J-PARC/CROSS, Japan</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://faculty.pku.edu.cn/~niQ7Vj/en/index.htm" data-org="https://english.pku.edu.cn" target="_blank" rel="noopener" title="Prof. Limei Xu (Peking University)">
+                            <img class="speaker-img" src="https://faculty.pku.edu.cn/_resources/group1/M00/00/06/cxv0BF5CdA-AMnZpAAF3Ygg7vXY767.png" alt="Prof. Limei Xu">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Limei Xu</h4>
+                            <p class="speaker-affiliation">Peking University, China</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://people.ucas.ac.cn/~GUO?language=en" data-org="https://www.csns.ac.cn" target="_blank" rel="noopener" title="Prof. Hongyu Guo (CSNS)">
+                            <img class="speaker-img speaker-img--portrait" src="https://people.ucas.ac.cn/self/img/8273ab2e-ef24-41c9-98c5-ae321b51c306.jpg" alt="Prof. Hongyu Guo">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Hongyu Guo</h4>
+                            <p class="speaker-affiliation">China Spallation Neutron Source (CSNS), China</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://people.ucas.edu.cn/~chenghe?language=en" data-org="https://www.csns.ac.cn" target="_blank" rel="noopener" title="Prof. He Cheng (CSNS)">
+                            <img class="speaker-img speaker-img--portrait" src="https://people.ucas.edu.cn/self/img/fa26ee94-1959-4e9a-ad35-a8db59042bed.jpg" alt="Prof. He Cheng">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. He Cheng</h4>
+                            <p class="speaker-affiliation">CSNS, China</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://ihepwho.ihep.ac.cn/index/info/230" data-org="https://www.csns.ac.cn" target="_blank" rel="noopener" title="Prof. Quan Hao (CSNS)">
+                            <img class="speaker-img speaker-img--portrait" src="https://ihepwho.ihep.ac.cn/files/20230917/e6e69014-28f4-4dec-8d82-e6eb4ff17b6e.png" alt="Prof. Quan Hao">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Quan Hao</h4>
+                            <p class="speaker-affiliation">CSNS, China</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://www.scifac.hku.hk/people/jiang-haibo" data-org="https://www.hku.hk" target="_blank" rel="noopener" title="Prof. Haibo Jiang (University of Hong Kong)">
+                            <img class="speaker-img speaker-img--portrait" src="https://www.scifac.hku.hk/f/people/7404/204c234/Photo_Haibo%20Jiang%20%282%29.png" alt="Prof. Haibo Jiang">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Haibo Jiang</h4>
+                            <p class="speaker-affiliation">University of Hong Kong, HKSAR</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://scholar.google.com/citations?user=2HfhmhoAAAAJ&hl=zh-CN" data-org="https://www.ningbo.edu.cn" target="_blank" rel="noopener" title="Prof. Haiyang Yan (Ningbo University)">
+                            <img class="speaker-img speaker-img--portrait" src="https://ftp.gscaep.ac.cn/20190728/20190728090909_42428.jpg" alt="Prof. Haiyang Yan">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Haiyang Yan</h4>
+                            <p class="speaker-affiliation">Ningbo University, China</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="http://www.sari.cas.cn/gradedu/szdw/dbz/yjsds/202507/t20250709_7881918.html" data-org="https://www.ssrf.ac.cn/english/" target="_blank" rel="noopener" title="Prof. Na Li (SSRF)">
+                            <img class="speaker-img speaker-img--portrait" src="http://www.sari.cas.cn/gradedu/szdw/dbz/yjsds/202507/W020250710661843657264.jpg" alt="Prof. Na Li">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Na Li</h4>
+                            <p class="speaker-affiliation">Shanghai Synchrotron Radiation Facility, China</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://people.ucas.ac.cn/~yubinke" data-org="https://www.csns.ac.cn" target="_blank" rel="noopener" title="Prof. Yubin Ke (CSNS)">
+                            <img class="speaker-img speaker-img--portrait" src="https://people.ucas.ac.cn/self/img/a0299324-ce38-4bb2-a338-2afc7bf1086b.jpg" alt="Prof. Yubin Ke">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Yubin Ke</h4>
+                            <p class="speaker-affiliation">CSNS, China</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://people.ucas.ac.cn/~jianghanqiu" data-org="https://www.csns.ac.cn" target="_blank" rel="noopener" title="Prof. Hanqiu Jiang (CSNS)">
+                            <img class="speaker-img speaker-img--portrait" src="https://people.ucas.ac.cn/self/img/495e591b-16c9-4126-a6b7-0a6535890a35.jpg" alt="Prof. Hanqiu Jiang">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Hanqiu Jiang</h4>
+                            <p class="speaker-affiliation">CSNS, China</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://mgbkl.ouc.edu.cn/sfc/WeizhiLIU/list.htm" data-org="https://www.ouc.edu.cn" target="_blank" rel="noopener" title="Prof. Weizhi Liu (Ocean University of China)">
+                            <img class="speaker-img speaker-img--portrait" src="https://mgbkl.ouc.edu.cn/_upload/article/images/30/39/a52b5fca4b3e9c8d9a6d7276ff10/65c22ddc-56f2-4a07-b2af-adb82186a9c7.jpg" alt="Prof. Weizhi Liu">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Weizhi Liu</h4>
+                            <p class="speaker-affiliation">Ocean University of China</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://faculty.njau.edu.cn/wanqun/zh_CN/index/138489/list/index.htm" data-org="https://www.njau.edu.cn" target="_blank" rel="noopener" title="Prof. Qun Wan (Nanjing Agricultural University)">
+                            <img class="speaker-img speaker-img--portrait" src="https://faculty.njau.edu.cn/_resources/group1/M00/00/02/CgUGw2VwC1uADLLtAAHdcOCxAAM985.png" alt="Prof. Qun Wan">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Qun Wan</h4>
+                            <p class="speaker-affiliation">Nanjing Agricultural University, China</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://l01.iphy.ac.cn/linglu/" data-org="https://www.ipc.ac.cn" target="_blank" rel="noopener" title="Prof. Ying Lu (Institute of Physics, CAS)">
+                            <img class="speaker-img speaker-img--portrait" src="https://l01.iphy.ac.cn/linglu/Ling.jpg" alt="Prof. Ying Lu">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Ying Lu</h4>
+                            <p class="speaker-affiliation">Institute of Physics, CAS</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://www.cityu.edu.hk/mse/people/mse-faculty/fan-jun" data-org="https://www.cityu.edu.hk" target="_blank" rel="noopener" title="Prof. Jun Fan (CityUHK)">
+                            <img class="speaker-img speaker-img--portrait" src="https://www.cityu.edu.hk/mse/sites/g/files/asqsls7796/files/2022-07/FAN-jun.png" alt="Prof. Jun Fan">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Jun Fan</h4>
+                            <p class="speaker-affiliation">City University of Hong Kong</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://www.x-mol.com/groups/yuan_bing" data-org="https://www.ssmlabs.com" target="_blank" rel="noopener" title="Prof. Bing Yuan (Songshan Lake Materials Laboratory)">
+                            <img class="speaker-img speaker-img--portrait" src="https://xpic.x-mol.com/20211116%2F1637071279284.jpg" alt="Prof. Bing Yuan">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Bing Yuan</h4>
+                            <p class="speaker-affiliation">Songshan Lake Materials Laboratory</p>
+                        </div>
+                    </div>
+                    <div class="speaker-card">
+                        <a class="speaker-link" href="https://people.ucas.edu.cn/~zuotaisen.ucas.edu.cn" data-org="https://www.csns.ac.cn" target="_blank" rel="noopener" title="Prof. Taisen Zuo (CSNS)">
+                            <img class="speaker-img speaker-img--portrait" src="https://people.ucas.edu.cn/self/img/b54e4617-0f14-4858-9156-8127e088fd0a.jpg" alt="Prof. Taisen Zuo">
+                        </a>
+                        <div class="speaker-info">
+                            <h4>Prof. Taisen Zuo</h4>
+                            <p class="speaker-affiliation">CSNS, China</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conference Topics -->
+            <section class="topics-section" id="topics">
+                <h2 class="section-title">Focus Areas</h2>
+                <div class="topics-grid">
+                    <div class="topic-item">
+                        <h4>Soft Matter</h4>
+                        <p>Polymers, colloids, liquid crystals</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Complex Materials</h4>
+                        <p>Multifunctional and hybrid materials</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Biophysics</h4>
+                        <p>Biological applications of neutron scattering</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Instrument Development</h4>
+                        <p>New neutron scattering techniques</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Data Analysis</h4>
+                        <p>Advanced computational methods</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Industrial Applications</h4>
+                        <p>Practical implementations in industry</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Registration -->
+            <section class="registration-section" id="registration">
+                <h2 class="section-title">Forum Registration</h2>
+                <div class="form-container" style="text-align: center; max-width: 900px;">
+                    <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.8;">
+                        To register for the 2025 Hong Kong Forum on Neutron Scattering, please send an email to:
+                    </p>
+                    <div style="background: white; padding: 30px; border-radius: 10px; margin: 30px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                        <p style="font-size: 1.1rem; margin-bottom: 15px; color: #666;">
+                            <strong>Registration Email:</strong>
+                        </p>
+                        <a href="mailto:kkklo5@cityu.edu.hk" style="font-size: 1.5rem; color: #D64337; text-decoration: none; font-weight: 600;">
+                            kkklo5@cityu.edu.hk
+                        </a>
+                    </div>
+                    <div style="text-align: center; background: #f8f9fa; padding: 25px; border-radius: 8px; margin-top: 30px;">
+                        <h3 style="color: #D64337; margin-bottom: 15px;">Please include the following information in your email:</h3>
+                        <ul style="font-size: 1rem; line-height: 1.8; color: #555; list-style: none; padding: 0;">
+                            <li>Full Name</li>
+                            <li>Email Address</li>
+                            <li>Affiliation/Institution</li>
+                            <li>Position/Title</li>
+                            <li>Phone Number (optional)</li>
+                        </ul>
+                    </div>
+                    <p style="font-size: 1rem; margin-top: 30px; color: #666; font-style: italic;">
+                        You will receive a confirmation email after your registration is processed.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+	
+    <!-- Sponsors Section -->
+    <section class="sponsors-section">
+        <div class="container">
+			<h3>Sponsored by <a href="https://www.croucher.org.hk" class="croucher-link">Croucher Foundation</a></h3>
+            <div class="sponsors-logos">
+                <img src="https://croucher.org.hk/assets/croucher-stamp-red.svg" alt="Croucher Foundation" class="sponsor-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Center for Neutron Scattering</p>
+                    <!--<p>Department of Physics</p>-->
+                    <p>City University of Hong Kong</p>
+                    <p>Tat Chee Avenue, Kowloon, Hong Kong</p>
+                    <p><a href="mailto:kkklo5@cityu.edu.hk">Email: kkklo5@cityu.edu.hk</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="https://www.cityu.edu.hk">City University of Hong Kong</a>
+                    <a href="https://www.cityu.edu.hk/phy">Department of Physics</a>
+                    <a href="https://www.cityu.edu.hk/cns">Centre for Neutron Scattering</a>
+                    <a href="https://www.croucher.org.hk">Croucher Foundation</a>
+                </div>
+			    <div class="footer-section">
+					<h3>Travel Information</h3>
+					<a href="https://www.cityu.edu.hk/en/about/campus/map">Campus Map of CityUHK</a>
+					<a href="https://www.discoverhongkong.com/hk-eng/index.html">Hong Kong Tourism Board</a>
+                    <a href="https://www.mtr.com.hk/en/customer/main/index.html">MTR Train in Hong Kong</a>
+				</div>
+<!--                <div class="footer-section">
+                    <h3>Forum Information</h3>
+                    <a href="https://www.cityu.edu.hk/cns/conference.htm">Official Conference Page</a>
+                    <a href="#program">Program Schedule</a>
+                    <a href="#speakers">Invited Speakers</a>
+                    <a href="#registration">Registration</a>
+                </div>
+-->
+            </div>
+            <div class="copyright">
+                <p>© 2025 City University of Hong Kong. All rights reserved. | Sponsored by Croucher Foundation</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
